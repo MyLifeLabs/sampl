@@ -1,0 +1,32 @@
+
+                                    sampl
+                         Pick random lines from files
+
+
+sampl is a command-line tool for randomly picking a number of lines from
+large data files. By default, it picks 10 lines.
+
+sampl is useful in order to get an idea of what's in a data file without
+worrying whether the beginning of the file is representative of the rest.
+
+sampl is fast because it doesn't scan the entire file(s) but simply picks
+lines found at random positions.
+
+
+Algorithm for picking a random line
+===================================
+
+1. A random byte position is chosen in the input files,
+   just as if the files were concatenated as one big file.
+
+2. The position is moved forward to the nearest beginning of line.
+
+3. The line is read and printed to stdout.
+
+This algorithm gives more chances to lines that follow long lines.
+Therefore, lines are picked really "randomly" only if the length of a
+line is statistically independent from any property of the line
+that follows.
+
+Also, the same line can be picked several times over the execution of the
+program.
