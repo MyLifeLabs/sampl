@@ -1,10 +1,11 @@
 
                                     sampl
-                         Pick random lines from files
+                 like "head" or "tail" but picks 10 random lines
 
 
 sampl is a command-line tool for randomly picking a number of lines from
-large data files. By default, it picks 10 lines.
+large data files. By default, it picks 10 lines like the Unix commands
+"head" and "tail".
 
 sampl is useful in order to get an idea of what's in a data file without
 worrying whether the beginning of the file is representative of the rest.
