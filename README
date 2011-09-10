@@ -13,6 +13,26 @@ sampl is fast because it doesn't scan the entire file(s) but simply picks
 lines found at random positions.
 
 
+Installation
+============
+
+Requires a standard installation of OCaml.
+
+ $ make
+ $ make install  # Installation directory defaults to $HOME/bin.
+
+PREFIX and BINDIR are supported, so if you want to install sampl in /usr/local,
+just do:
+
+ $ sudo make PREFIX=/usr/local install
+
+
+Uninstallation:
+
+ $ make uninstall
+
+
+
 Algorithm for picking a random line
 ===================================
 
