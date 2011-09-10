@@ -32,6 +32,36 @@ Uninstallation:
  $ make uninstall
 
 
+Usage
+=====
+
+"sampl" is typically used as replacement for "head" on large data files
+whose first records are often not representative of typical lines.
+
+
+$ ./sampl --help
+Usage: ./sampl [OPTIONS] FILE1 [FILE2 ...]
+
+sampl picks 10 random lines from the input files without scanning 
+the entire file.
+
+Options:
+
+  -i 
+          Keep outputting random lines indefinitely instead of stopping
+          after 10 lines. See also -n.
+  -n NUMBER
+          Specify sample size, i.e. the number of lines to pick.
+          The default is 10 lines. See also -i.
+  -s NUMBER
+          Specify seed of the random number generator.
+          By default, the seed is initialized randomly from system resources.
+  -version 
+          Print sampl version and exit.
+  -help  Display this list of options
+  --help  Display this list of options
+
+
 
 Algorithm for picking a random line
 ===================================
